@@ -1,8 +1,8 @@
 ﻿<!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/https://github.com/PointCloudSegementationOnALSandMLS">
-    <img src="img/logo.PNG" alt="Logo">
+  <a href="https://github.com/PointCloudSegementationOnALSandMLS">
+    <img src="https://github.com/PointCloudSegementationOnALSandMLS/.github/blob/main/profile/img/logo.png?raw=true" alt="Logo">
   </a>
 
   <h3 align="center">Master Thesis - Point Cloud Segmentation of Urban Architectural Structures from Aerial and Mobile LiDAR Scans using Neural Networks
