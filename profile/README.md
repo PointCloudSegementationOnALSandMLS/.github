@@ -2,14 +2,14 @@
 <br />
 <p align="center">
   <a href="https://github.com/https://github.com/PointCloudSegementationOnALSandMLS">
-    <img src="images/logo.PNG" alt="Logo">
+    <img src="img/logo.PNG" alt="Logo">
   </a>
 
   <h3 align="center">Master Thesis - Point Cloud Segmentation of Urban Architectural Structures from Aerial and Mobile LiDAR Scans using Neural Networks
  </h3>
 
   <p align="center">
-    This organization contains the main source code used and devloped for this master thesis. However, the scripts were often used in small deviations. Here we tired to adjust these to make them reusable by other persons. In any questions arise, please [contact](#contact) me. 
+    This organization contains the main source code used and devloped for this master thesis. However, the scripts were often used in small deviations. Here we tired to adjust these to make them reusable by other persons. In any questions arise, please contact me. 
 The ALS and MLS datasets and pre-trained models on this datasets will be published shortly.
     <br/>
     
@@ -52,11 +52,22 @@ whereas on aerial scans it was useful to identify ground points.
 
 <!-- Implementation -->
 ## Implementation
+For the implementation we used the existing repositories [Open3D-ML](https://github.com/PointCloudSegementationOnALSandMLS/Open3D-ML) and [KPConv-Pytorch](https://github.com/PointCloudSegementationOnALSandMLS/KPConv-PyTorch). For both repositories we adapted the forks, reprsented in this organisation. Further we introduce the DataProcessingAndEvaluation repository, which contains, Data processing, visualization and evaluation scripts.
 
+### Open3D
+For the Open3D-ML package we added configurations and data loader scripts for the DALES dataset and our new intorduced Essen-ALS and Essen-MLS dataset. Further we did small adjustements in the weight calculations and the models itself.
 
+The configurations can be found here: ml3d/configs/configs The data loader scripts are inside this folder: ml3d/datasets
 
+Additionally we implemented two scipts: train_dataset.py and inference_dataset.py. These scripts were used for training and inferencing and we found that those scipts are missing in this repository.
+
+### KPConv
+For the KPConv dataset we implemented a data loader script for the DALES dataset and our new introduced Essen-ALS and MLS datasets. Further, we implemented training scripts for our Essen datasets. In these datasets also the configurations and parameter seettings are already included. In addition, we adapted the test scipt to also deal with our dataset.
+
+### DataProcessingAndEvaluation
+In this folder we provide different scripts we used during our thesis. For more information please stick to the Readme in this repository.
 ## Getting started
-
+When you are generally interested in using point clouds and machine learning on these we suggest to orientate on the Open3D package. When interested in training the KPConv model please refer to the KPConv-Pytorch repository. When you are interested how we preprocessed our data and evaluated the results, have a look at our DataProcessingAndEvaluation repository. In general please gain further information on how to get started, from the Readmes of the different repositories.
 
 
 <!-- CONTACT -->
